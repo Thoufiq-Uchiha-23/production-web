@@ -8,6 +8,9 @@ import {
   Projects,
   Blogs,
   Contact,
+  DigitalMarketing,
+  CreativeProduction,
+  Consulting,
   Navbar,
   Sidebar,
 } from "./Components/index";
@@ -15,10 +18,15 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services />}>
+          <Route path="digital-marketing" element={<DigitalMarketing />} />
+          <Route path="creative-production" element={<CreativeProduction />} />
+          <Route path="consulting" element={<Consulting />} />
+        </Route>
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
