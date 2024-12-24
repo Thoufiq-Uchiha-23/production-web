@@ -12,6 +12,7 @@ import {
   CreativeProduction,
   Consulting,
   Navbar,
+  Footer,
   Sidebar,
 } from "./Components/index";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

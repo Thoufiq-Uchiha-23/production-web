@@ -9,6 +9,7 @@ import CreativeProduction from "./Pages/CreativeProduction";
 import Consulting from "./Pages/Consulting";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 
 export {
   Home,
@@ -22,4 +23,5 @@ export {
   Consulting,
   Navbar,
   Sidebar,
+  Footer,
 };
