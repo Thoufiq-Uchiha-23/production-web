@@ -1,67 +1,3 @@
-// import React from "react";
-// import styled from "styled-components";
-// import { NavLink } from "react-router-dom";
-// import { links } from "./data";
-
-// const Navbar = () => {
-//   return (
-//     <Wrapper>
-//       <nav>
-//         <h1>Logo</h1>
-//         <ul>
-//           {links.map((link) => {
-//             const { id, text, url } = link;
-//             return (
-//               <li key={id}>
-//                 <NavLink
-//                   to={url}
-//                   className={({ isActive }) => (isActive ? "active" : "")}>
-//                   {text}
-//                 </NavLink>
-//               </li>
-//             );
-//           })}
-//         </ul>
-//       </nav>
-//     </Wrapper>
-//   );
-// };
-
-// const Wrapper = styled.div`
-//   nav {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     margin: 0 5em;
-//   }
-
-//   ul {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 3em;
-//   }
-
-//   li {
-//     list-style: none;
-//   }
-//   a {
-//     text-decoration: none;
-//     color: #000;
-//     font-size: 18px;
-//     font-weight: 300;
-//     line-height: 172%; /* 36.12px */
-//   }
-
-//   .active {
-//     border-bottom: 3px solid var(--primary-yellow-color);
-//     padding-bottom: 0.4em;
-//     color: var(--primary-yellow-color);
-//   }
-// `;
-
-// export default Navbar;
 import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
@@ -145,12 +81,12 @@ const Wrapper = styled.div`
   nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 5em;
+    margin: .5em 5em;
   }
 
   ul {
     display: flex;
-    gap: 2em;
+    gap: 3em;
     list-style: none;
   }
 
@@ -193,6 +129,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    width: 160px;
   }
 
   .dropdown-link {
