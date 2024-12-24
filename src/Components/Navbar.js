@@ -48,7 +48,7 @@ const Navbar = () => {
                           key={sublink.id}
                           to={sublink.url}
                           className={({ isActive }) =>
-                            isActive ? "active" : "dropdown-link"
+                            isActive ? "dropdown-active" : "dropdown-link"
                           }
                           onClick={closeDropdown} // Close dropdown on sublink click
                         >
@@ -81,7 +81,7 @@ const Wrapper = styled.div`
   nav {
     display: flex;
     justify-content: space-between;
-    margin: .5em 5em;
+    margin: 0.5em 5em;
   }
 
   ul {
@@ -129,13 +129,17 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    width: 160px;
+    width: 200px;
+    text-align: center;
   }
 
+  .dropdown-active {
+    color: var(--primary-yellow-color);
+  }
   .dropdown-link {
     text-decoration: none;
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
     padding: 0.5em 0;
     transition: color 0.3s;
 
