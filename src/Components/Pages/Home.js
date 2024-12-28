@@ -83,9 +83,9 @@ const Home = () => {
             {portfolios.map((portfolio) => (
               <div
                 key={portfolio.id}
-                className={`flex flex-col border items-center relative justify-evenly hover:shadow-lg w-[380px] overflow-hidden h-auto duration-500 transition-all ease-in-out gap-2 rounded-[10px]`}
+                className={`flex flex-col border items-center relative justify-evenly hover:shadow-lg overflow-hidden hover:scale-125 duration-500 transition-all ease-in-out gap-2 rounded-[10px]`}
               >
-                <img src={portfolio.src} alt={portfolio.title} className="object-fit object-center object-cover"/>
+                <img src={portfolio.src} alt={portfolio.title} className="object-fit w-[300px] h-[200px] object-center object-cover"/>
               </div>
             ))}
           </div>
