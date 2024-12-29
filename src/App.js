@@ -16,7 +16,7 @@ import {
   Sidebar,
 } from "./Components/index";
 
-function App() {
+function App() { 
   return (
     <Router>
       <Navbar />
