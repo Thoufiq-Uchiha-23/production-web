@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { links } from "./data";
 import { FaCaretDown } from "react-icons/fa";
+import logo from "../assets/Logo.svg";
+import { IoMenu } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({toggleSidebar}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,133 +21,76 @@ const Navbar = () => {
   };
 
   return (
-    <Wrapper>
-      <nav>
-        <h1>Logo</h1>
-        <ul>
-          {links.map((link) => {
-            const { id, text, url, sublinks } = link;
+    <nav className="flex justify-between items-center mx-5 mt-2 mb-2 md:mx-20">
+      {/* Header */}
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <img src={logo} alt="logo" className="w-12 md:w-20" />
+        <div className="text-2xl md:hidden">
+          <IoMenu onClick={toggleSidebar}/>
+        </div>
+      </div>
 
-            if (text === "Services") {
-              return (
-                <li
-                  key={id}
-                  className="dropdown"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}>
-                  <NavLink
-                    to={url}
-                    className={({ isActive }) => (isActive ? "active" : "")}>
-                    {text}
-                    <FaCaretDown className="dropdown-icon" />
-                  </NavLink>
+      {/* Navigation Links */}
+      <ul className="hidden md:flex gap-12 list-none">
+        {links.map((link) => {
+          const { id, text, url, sublinks } = link;
 
-                  {isDropdownOpen && sublinks && (
-                    <div className="dropdown-menu">
-                      {sublinks.map((sublink) => (
-                        <NavLink
-                          key={sublink.id}
-                          to={sublink.url}
-                          className={({ isActive }) =>
-                            isActive ? "dropdown-active" : "dropdown-link"
-                          }
-                          onClick={closeDropdown} // Close dropdown on sublink click
-                        >
-                          {sublink.text}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
-                </li>
-              );
-            }
-
+          if (text === "Services") {
             return (
-              <li key={id}>
+              <li
+                key={id}
+                className="relative group"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
                 <NavLink
                   to={url}
-                  className={({ isActive }) => (isActive ? "active" : "")}>
+                  className={({ isActive }) =>
+                    `inline-flex items-center text-gray-900 text-lg font-light ${
+                      isActive ? "border-b-4 border-primary-yellow" : ""
+                    }`
+                  }>
                   {text}
+                  <FaCaretDown className="ml-2 text-sm" />
                 </NavLink>
+                {/* Dropdown Menu */}
+                {isDropdownOpen && sublinks && (
+                  <div className="absolute top-full left-0 bg-white shadow-lg rounded-md z-10 flex flex-col gap-2 p-3 w-56 text-center">
+                    {sublinks.map((sublink) => (
+                      <NavLink
+                        key={sublink.id}
+                        to={sublink.url}
+                        className={({ isActive }) =>
+                          `text-gray-900 text-base py-2 hover:text-primary-yellow transition ${
+                            isActive ? "text-primary-yellow" : ""
+                          }`
+                        }
+                        onClick={closeDropdown}>
+                        {sublink.text}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
               </li>
             );
-          })}
-        </ul>
-      </nav>
-    </Wrapper>
+          }
+
+          return (
+            <li key={id}>
+              <NavLink
+                to={url}
+                className={({ isActive }) =>
+                  `text-gray-900 text-lg font-light ${
+                    isActive ? "border-b-4 border-primary-yellow" : ""
+                  }`
+                }>
+                {text}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
-
-const Wrapper = styled.div`
-  nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5em 5em;
-  }
-
-  ul {
-    display: flex;
-    gap: 3em;
-    list-style: none;
-  }
-
-  li {
-    position: relative; /* Needed for dropdown positioning */
-  }
-
-  a {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    font-weight: 300;
-  }
-
-  .active {
-    border-bottom: 3px solid var(--primary-yellow-color);
-    padding-bottom: 0.4em;
-    color: var(--primary-yellow-color);
-  }
-
-  /* Dropdown Styles */
-  .dropdown {
-    cursor: pointer;
-  }
-
-  .dropdown-icon {
-    margin-left: 5px;
-    font-size: 12px;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    top: 100%; /* Show below the link */
-    left: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 10;
-    padding: 0.5em 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    width: 200px;
-    text-align: center;
-  }
-
-  .dropdown-active {
-    color: var(--primary-yellow-color);
-  }
-  .dropdown-link {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    padding: 0.5em 0;
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--primary-yellow-color);
-    }
-  }
-`;
 
 export default Navbar;

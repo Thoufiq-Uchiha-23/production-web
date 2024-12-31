@@ -6,8 +6,10 @@ module.exports = {
       fontFamily: {
         robot: "var(--font-robot)",
       },
+      colors: {
+        "primary-yellow": "#FEBF00",
+      },
     },
   },
   plugins: [],
-}
-
+};
