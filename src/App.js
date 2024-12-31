@@ -17,12 +17,6 @@ import {
 } from "./Components/index";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <Router>
       <Navbar toggleSidebar={toggleSidebar} />
