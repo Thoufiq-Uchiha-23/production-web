@@ -10,13 +10,13 @@ export const links = [
   {
     id: 1,
     text: "Home",
-    url: "home",
+    url: "/",
     icon: <IoHomeOutline />,
   },
   {
     id: 2,
     text: "About",
-    url: "about",
+    url: "/about",
     icon: <LuScrollText />,
   },
   {

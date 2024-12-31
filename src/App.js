@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
@@ -16,10 +16,17 @@ import {
   Sidebar,
 } from "./Components/index";
 
-function App() { 
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Router>
-      <Navbar />
+      <Navbar toggleSidebar={toggleSidebar} />
+      <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
