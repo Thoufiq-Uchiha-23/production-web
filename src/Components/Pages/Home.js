@@ -30,7 +30,7 @@ const Home = () => {
       <div className="flex items-center justify-center mx-auto relative px-40 py-20 mt-[70px] gap-10">
         <div className="flex items-center justify-center h-auto">
           <div className="w-full justify-evenly flex items-center">
-            <div className="w-[800px]">
+            <div className="w-[950px]">
               <h1 className="text-4xl font-light py-4">About Us</h1>
               <p className="text-xl pb-7 leading-8 font-light">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
