@@ -4,7 +4,7 @@ import { portfolios, services, stats } from "../../constants";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-auto mx-auto">
+    <div className="flex justify-center w-full h-auto mx-auto">
       {/* HEADER SECTION */}
       <div
         className="text-center w-full flex justify-center items-center h-[600px] relative bg-cover bg-center"
@@ -27,8 +27,9 @@ const Home = () => {
         </div>
       </div>
       {/* ABOUT */}
-      <div className="flex items-center justify-between w-full h-auto px-40 py-20 mt-[70px] gap-10">
-        <div className="w-full">
+      <div className=" w-full flex justify-center mx-auto relative px-40 py-20 mt-[70px] gap-10">
+      <div className="flex items-center justify-evenly w-full mx-auto h-auto">
+        <div className="">
           <h1 className="text-4xl font-light py-4">About Us</h1>
           <p className="text-xl pb-7 leading-8 font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
@@ -55,11 +56,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+      </div>
       {/* SERVICES */}
       <div className="flex justify-center flex-col items-center w-full h-auto px-40 py-20">
         <h1 className="text-4xl font-light py-4 text-center">Our Services</h1>
         <div className="w-full flex justify-between items-center">
-          <div className="w-full py-7 h-auto flex items-center justify-between flex-wrap relative">
+          <div className="w-full py-7 h-auto flex items-center justify-center gap-7 flex-wrap relative">
             {services.map((service) => (
               <div
                 key={service.id}
@@ -79,7 +81,7 @@ const Home = () => {
       <div className="flex justify-center flex-col items-center w-full h-auto px-40 py-20">
         <h1 className="text-4xl font-light py-4 text-center">Portfolio</h1>
         <div className="w-full flex justify-between items-center">
-          <div className="w-full py-7 h-auto flex items-center justify-between flex-wrap relative">
+          <div className="w-full py-7 h-auto flex items-center justify-center gap-10 flex-wrap relative">
             {portfolios.map((portfolio) => (
               <div
                 key={portfolio.id}
