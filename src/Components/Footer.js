@@ -1,9 +1,13 @@
 import React from "react";
+import { GrLocation } from "react-icons/gr";
+import { LuMail } from "react-icons/lu";
+import { HiOutlinePhone } from "react-icons/hi2";
+
 
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-auto mx-auto bg-black text-white">
-      <div className="flex items-start justify-evenly w-full h-auto px-40 py-10 gap-10">
+      <div className="flex items-start justify-between w-full h-auto px-40 py-10 gap-10">
         <div className="flex flex-col items-start justify-center w-full">
           <h1 className="text-4xl text-yellow-500">Logo</h1>
           <p className="text-base font-light py-5">
@@ -18,9 +22,9 @@ const Footer = () => {
         <div className="w-full">
           <h1 className="text-xl text-yellow-500 font-light">Get in Touch</h1>
           <div className="text-base font-light font-robot py-5 leading-10">
-            <p>Shahre Naow, Kabul Afghanistan</p>
-            <p>production.com</p>
-            <p>+93 73 112 8880</p>
+            <p className="gap-2 flex items-center"><GrLocation className="w-[20px] h-[20px]" />Shahre Naow, Kabul Afghanistan</p>
+            <p className="gap-2 flex items-center"><LuMail className="w-[20px] h-[20px]" />production.com</p>
+            <p className="gap-2 flex items-center"><HiOutlinePhone className="w-[20px] h-[20px]" />+93 73 112 8880</p>
           </div>
         </div>
         <div className="w-full">
