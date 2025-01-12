@@ -1,4 +1,17 @@
-import { consulting, creative_production, dig_market, portfolio1, portfolio2, portofolio3 } from "../assets";
+import {
+  consulting,
+  creative_production,
+  dig_market,
+  portfolio1,
+  portfolio2,
+  portofolio3,
+} from "../assets";
+import { FaTiktok } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export const stats = [
   {
@@ -24,37 +37,70 @@ export const stats = [
 ];
 
 export const services = [
-    {
-        id: 1,
-        src: dig_market,
-        title: "Digital Marketing",
-    }, 
-    {
-        id: 2,
-        src: creative_production,
-        title: "Creative Productions",
-    }, 
-    {
-        id: 3,
-        src: consulting,
-        title: "Consulting",
-    }
-]
+  {
+    id: 1,
+    src: dig_market,
+    title: "Digital Marketing",
+  },
+  {
+    id: 2,
+    src: creative_production,
+    title: "Creative Productions",
+  },
+  {
+    id: 3,
+    src: consulting,
+    title: "Consulting",
+  },
+];
 
 export const portfolios = [
-    {
-        id: 1,
-        src: portfolio1,
-        title: "Portfolio 1",
-    }, 
-    {
-        id: 2,
-        src: portfolio2,
-        title: "Portfolio 2",
-    }, 
-    {
-        id: 3,
-        src: portofolio3,
-        title: "Portfolio 3",
-    }
-]
+  {
+    id: 1,
+    src: portfolio1,
+    title: "Portfolio 1",
+  },
+  {
+    id: 2,
+    src: portfolio2,
+    title: "Portfolio 2",
+  },
+  {
+    id: 3,
+    src: portofolio3,
+    title: "Portfolio 3",
+  },
+];
+
+export const socials = [
+  {
+    id: 1,
+    element: <FaTiktok />,
+    title: "tiktok",
+  },
+  {
+    id: 2,
+    element: <FaFacebookF />,
+    title: "facebook",
+  },
+  {
+    id: 3,
+    element: <FaYoutube />,
+    title: "youtube",
+  },
+  {
+    id: 4,
+    element: <FaLinkedinIn />,
+    title: "linkedin",
+  },
+  {
+    id: 5,
+    element: <FaTwitter />,
+    title: "twitter",
+  },
+  {
+    id: 6,
+    element: <FaInstagram />,
+    title: "instagram",
+  },
+];
