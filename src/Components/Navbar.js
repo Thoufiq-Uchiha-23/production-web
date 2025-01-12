@@ -21,17 +21,17 @@ const Navbar = ({toggleSidebar}) => {
   };
 
   return (
-    <nav className="flex justify-between items-center mx-5 mt-2 mb-2 md:mx-20">
+    <nav className="flex justify-between items-center w-full  px-10 py-3 lg:py-2 lg:px-20">
       {/* Header */}
       <div className="flex items-center justify-between w-full md:w-auto">
-        <img src={logo} alt="logo" className="w-12 md:w-20" />
+        <img src={logo} alt="logo" className="w-[35px] md:w-[50px] lg:w-20" />
         <div className="text-2xl cursor-pointer md:hidden">
           <IoMenu onClick={toggleSidebar}/>
         </div>
       </div>
 
       {/* Navigation Links */}
-      <ul className="hidden md:flex gap-12 list-none">
+      <ul className="hidden md:flex gap-7 lg:gap-12 list-none">
         {links.map((link) => {
           const { id, text, url, sublinks } = link;
 
@@ -45,7 +45,7 @@ const Navbar = ({toggleSidebar}) => {
                 <NavLink
                   to={url}
                   className={({ isActive }) =>
-                    `inline-flex items-center text-gray-900 text-lg font-light ${
+                    `inline-flex items-center text-gray-900 text-sm lg:text-lg font-light ${
                       isActive ? "border-b-4 border-primary-yellow" : ""
                     }`
                   }>
@@ -79,7 +79,7 @@ const Navbar = ({toggleSidebar}) => {
               <NavLink
                 to={url}
                 className={({ isActive }) =>
-                  `text-gray-900 text-lg font-light ${
+                  `text-gray-900 text-sm lg:text-lg font-light ${
                     isActive ? "border-b-4 border-primary-yellow" : ""
                   }`
                 }>
