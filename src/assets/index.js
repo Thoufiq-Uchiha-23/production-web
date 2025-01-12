@@ -7,6 +7,7 @@ import portfolio1 from './portfolio/portfolio1.png'
 import portfolio2 from './portfolio/portfolio2.png'
 import portofolio3 from './portfolio/portfolio3.png'
 import designdot from './images/design-dot.png'
+import logo  from "./logo2.png"
 
 export {
     home,
@@ -16,5 +17,6 @@ export {
     portfolio1,
     portfolio2,
     portofolio3,
-    designdot
+    designdot,
+    logo
 }
