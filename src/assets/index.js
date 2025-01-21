@@ -8,6 +8,14 @@ import portfolio2 from './portfolio/portfolio2.png'
 import portofolio3 from './portfolio/portfolio3.png'
 import designdot from './images/design-dot.png'
 import logo  from "./logo2.png"
+import service from './images/service-image.png';
+// digital marketing
+import digimage1 from './digital-marketing/digital-image1.png'
+import digimage2 from './digital-marketing/digital-image2.png'
+import digimage3 from './digital-marketing/digital-image3.png'
+import digimage4 from './digital-marketing/digital-image4.png'
+import digimage5 from './digital-marketing/digital-image5.png'
+import digimage6 from './digital-marketing/digital-image6.png'
 
 export {
     home,
@@ -18,5 +26,12 @@ export {
     portfolio2,
     portofolio3,
     designdot,
-    logo
+    logo,
+    service,
+    digimage1,
+    digimage2,
+    digimage3,
+    digimage4,
+    digimage5,
+    digimage6
 }
