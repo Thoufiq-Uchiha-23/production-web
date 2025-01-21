@@ -3,7 +3,6 @@ import { designdot, home } from "../../assets";
 import { portfolios, services, stats } from "../../constants";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { Outlet, Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -26,11 +25,9 @@ const Home = () => {
               </p>
               <p>Your journey starts here.</p>
             </p>
-            <a href={"/services"}>
-              <button className="bg-yellow-500 px-3 md:px-5 lg:px-7 py-1 lg:py-2 rounded text-xs lg:text-base hover:bg-black hover:text-yellow-500 duration-500 transition-all ease-in-out">
-                Explore
-              </button>
-            </a>
+            <button className="bg-yellow-500 px-3 md:px-5 lg:px-7 py-1 lg:py-2 rounded text-xs lg:text-base hover:bg-black hover:text-yellow-500 duration-500 transition-all ease-in-out">
+              Explore
+            </button>
           </div>
           <IoIosArrowForward className="w-[16px] h-[16px] md:w-[50px] md:h-[50px] text-white" />
         </div>
@@ -132,11 +129,9 @@ const Home = () => {
 
           <IoIosArrowForward className="w-[30px] h-[30px]" />
         </div>
-        <Link to={"/"}>
-          <button className="bg-yellow-500 mt-3 px-6 py-1 lg:px-9 lg:py-2 rounded text-sm lg:text-xl hover:shadow-md hover:bg-black hover:text-yellow-500 duration-500 transition-all ease-in-out">
-            Explore All
-          </button>
-        </Link>
+        <button className="bg-yellow-500 mt-3 px-6 py-1 lg:px-9 lg:py-2 rounded text-sm lg:text-xl hover:shadow-md hover:bg-black hover:text-yellow-500 duration-500 transition-all ease-in-out">
+          Explore All
+        </button>
         <div className="w-[600px] lg:w-[1000px] absolute right-0 bottom-0 -z-10 rotate-180">
           <img
             src={designdot}
@@ -145,7 +140,6 @@ const Home = () => {
           />
         </div>
       </div>
-      <Outlet />
     </div>
   );
 };
