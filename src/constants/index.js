@@ -11,6 +11,12 @@ import {
   digimage4,
   digimage5,
   digimage6,
+  product1,
+  product2,
+  product3,
+  product4,
+  product5,
+  product6,
 } from "../assets";
 import { FaTiktok } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
@@ -115,31 +121,97 @@ export const markets = [
   {
     id: 1,
     src: digimage1,
-    title: "Portfolio 1",
+    title: "SEO Services",
   },
   {
     id: 2,
     src: digimage2,
-    title: "Portfolio 1",
+    title: "Social Media Marketing",
   },
   {
     id: 3,
     src: digimage3,
-    title: "Portfolio 1",
+    title: "Content Marketing",
   },
   {
     id: 4,
     src: digimage4,
-    title: "Portfolio 1",
+    title: "Paid Advertising",
   },
   {
     id: 5,
     src: digimage5,
-    title: "Portfolio 1",
+    title: "Graphic Design",
   },
   {
     id: 6,
     src: digimage6,
-    title: "Portfolio 1",
+    title: "Analytics & Reporting",
+  },
+];
+
+export const productions = [
+  {
+    id: 1,
+    src: product1,
+    title: "Videography",
+  },
+  {
+    id: 2,
+    src: product2,
+    title: "Photography",
+  },
+  {
+    id: 3,
+    src: product3,
+    title: "Event Coverage",
+  },
+  {
+    id: 4,
+    src: product4,
+    title: "Post-Production",
+  },
+  {
+    id: 5,
+    src: product5,
+    title: "Branding Design",
+  },
+  {
+    id: 6,
+    src: product6,
+    title: "Event Management",
+  },
+];
+
+export const consults = [
+  {
+    id: 1,
+    src: product1,
+    title: "Marketing Strategy",
+  },
+  {
+    id: 2,
+    src: product2,
+    title: "Brand Identity Consulting",
+  },
+  {
+    id: 3,
+    src: product3,
+    title: "Market Research",
+  },
+  {
+    id: 4,
+    src: product4,
+    title: "Analytics Consulting",
+  },
+  {
+    id: 5,
+    src: product5,
+    title: "Business Growth",
+  },
+  {
+    id: 6,
+    src: product6,
+    title: "Guidance to help",
   },
 ];
