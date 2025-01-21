@@ -5,6 +5,12 @@ import {
   portfolio1,
   portfolio2,
   portofolio3,
+  digimage1,
+  digimage2,
+  digimage3,
+  digimage4,
+  digimage5,
+  digimage6,
 } from "../assets";
 import { FaTiktok } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
@@ -102,5 +108,38 @@ export const socials = [
     id: 6,
     element: <FaInstagram />,
     title: "instagram",
+  },
+];
+
+export const markets = [
+  {
+    id: 1,
+    src: digimage1,
+    title: "Portfolio 1",
+  },
+  {
+    id: 2,
+    src: digimage2,
+    title: "Portfolio 1",
+  },
+  {
+    id: 3,
+    src: digimage3,
+    title: "Portfolio 1",
+  },
+  {
+    id: 4,
+    src: digimage4,
+    title: "Portfolio 1",
+  },
+  {
+    id: 5,
+    src: digimage5,
+    title: "Portfolio 1",
+  },
+  {
+    id: 6,
+    src: digimage6,
+    title: "Portfolio 1",
   },
 ];
